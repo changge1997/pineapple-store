@@ -22,9 +22,9 @@ runcmd:
   # install Node.js
   - 'curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -'
   - 'sudo apt-get install -y nodejs'
-  # clone GitHub Repo into myapp directory
-  - 'cd /home/azureuser'
-  - git clone "https://github.com/CIRCLECI-GWP/cd-node-azure-vm" myapp
+  # clone GitHub Repo into pineapple-store directory
+  - 'cd /home/changge'
+  - git clone "https://github.com/changge1997/pineapple-store.git" pineapple-store
   # Install pm2
   - 'sudo npm install pm2 -g'
   # restart NGINX
