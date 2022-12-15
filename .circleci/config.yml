@@ -11,7 +11,7 @@ jobs:
             - $AZURE_VM_SSH_FINGERPRINT
       - run:
           name: Copy updated files to VM
-          command: scp -o StrictHostKeyChecking=no -r ./* $AZURE_VM_USER@$AZURE_VM_IP:~/myapp
+          command: scp -o StrictHostKeyChecking=no -r ./* $AZURE_VM_USER@$AZURE_VM_IP:~/pineapple-store
 
   deploy:
     machine:
@@ -20,7 +20,7 @@ jobs:
       - run:
           name: Deploy Over SSH
           command: |
-            ssh $AZURE_VM_USER@$AZURE_VM_IP "cd myapp && sudo npm run-script stop && sudo npm install && sudo npm start"
+            ssh $AZURE_VM_USER@$AZURE_VM_IP "cd pineapple-store && sudo npm run-script stop && sudo npm install && sudo npm start"
 
 workflows:
   version: 2
